@@ -1,12 +1,19 @@
 import React from 'react';
+import { Provider } from 'react-redux'
+import { store } from './redux/store';
 import ReactDOM from 'react-dom';
+import Notes from './pages/Notes';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals';;
+// import { store } from './app/store'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
+    {/* <Notes/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
